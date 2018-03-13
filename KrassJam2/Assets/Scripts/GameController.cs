@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 	public AudioClip placementSound;
 
 	public List<Coordinate> activeTiles, inactiveTiles;
+	public List<GameObject> movementArrows;
 
 	public int totalTurnLimit, currentTurn, tileRespawnRate;
 	private bool gameOverTriggered;

@@ -1,0 +1,19 @@
+v1.1
+---
+- Implemented 'Hold To Drag' functionality in options
+- Fixed bug with restaurants occasionally only giving one star when rating should be higher
+- Fixed bug with valid tile positions for restaurant placements sometimes showing as invalid
+- Fixed issue with enemy occasionally getting stuck when adjacent to a restaurant.
+- Improved 'Hard Mode' AI
+- Player movement fixed - can no longer move diagonally or multiple spaces in one move
+- Restaurants can now be placed on an existing number tile
+- Prevented the use of keyboard to allow purchase of multiple restaurants in one turn
+- Enemy now has a 50/50 chance of going first
+- Enemies can now take stars off restaurants (or destroy them entirely if at one star) by walking adjacent to them
+- Extra tutorials added for new features
+- Player can no longer walk through enemy
+
+
+v1.0
+---
+- Initial game release.

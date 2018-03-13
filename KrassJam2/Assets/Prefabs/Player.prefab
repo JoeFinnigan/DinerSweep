@@ -104,6 +104,8 @@ MonoBehaviour:
   moveLocked: 0
   tilesTakenThisTurn: []
   startPos: {x: 0, y: 0, z: 0}
+  movementArrow: {fileID: 1748690577666904, guid: 0f92aaa5400070e4eb8bef813483e111,
+    type: 2}
 --- !u!114 &114283256241471798
 MonoBehaviour:
   m_ObjectHideFlags: 1

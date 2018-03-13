@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public bool moveLocked;
 	public List<GameObject> tilesTakenThisTurn;
 	public Vector3 startPos;
+	public GameObject movementArrow;
 
 	private Vector3 screenPoint, offset, oldPos;
 	private Vector3 currentPos, enemyPos, curScreenPoint;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	private List<Vector3> movePositions;
 	private bool isBacktracking;
 	private Vector3 posBeforeMove;
+	private float spriteRotation;
 
 	void Start(){
 		movePositions = new List<Vector3> ();
@@ -60,6 +62,14 @@ public class PlayerController : MonoBehaviour {
 
 	public void EndOfPlayerTurn(){
 		movePositions.Clear ();
+
+		foreach (GameObject arrow in game.movementArrows) {
+			Animator arrowAnim = arrow.GetComponent<Animator> ();
+			arrowAnim.Play ("Arrow_FadeOut");
+			Destroy (arrow, 1f);
+		}
+
+		game.movementArrows.Clear ();
 
 		if (enemy.firstTurn) {
 			game.IncrementTurnCount ();
@@ -156,18 +166,45 @@ public class PlayerController : MonoBehaviour {
 				}
 
 				movePositions.Remove (posBeforeMove);
+
+				foreach (GameObject arrow in game.movementArrows) {
+					if (arrow.transform.position == transform.position) {
+						Destroy (arrow);
+						game.movementArrows.Remove (arrow);
+						break;
+					}
+				}
+
 				moveCount++;
 				isBacktracking = true;
 				break;
 			}
 		}
 
-			if (!isBacktracking) {
-				moveCount--;
-				movePositions.Add (transform.position);
-			}
+		if (!isBacktracking) {
+			moveCount--;
+			movePositions.Add (transform.position);
 
-			UIController.instance.SetMoveCounter (moveCount);
+			AddMovementArrow ();
+		}
+
+		UIController.instance.SetMoveCounter (moveCount);
+	}
+
+	private void AddMovementArrow(){
+		// Work out direction of player to know what the arrow sprite's angle should be
+		if (transform.position.x > posBeforeMove.x) {
+			spriteRotation = 0f;
+		} else if (transform.position.x < posBeforeMove.x) {
+			spriteRotation = 180f;
+		} else if (transform.position.y > posBeforeMove.y) {
+			spriteRotation = 90f;
+		} else if (transform.position.y < posBeforeMove.y) {
+			spriteRotation = -90f;
+		}
+
+		GameObject newMovementArrow = Instantiate (movementArrow, posBeforeMove, Quaternion.Euler(0, 0, spriteRotation)) as GameObject;
+		game.movementArrows.Add (newMovementArrow);
 	}
 
 	private void SetNewPosVectors(){

@@ -41,6 +41,7 @@ public class MainMenuController : MonoBehaviour {
 		PlayerPrefController.SetTutorialToggle (1);
 		PlayerPrefController.SetVolume (1);
 		PlayerPrefController.SetInitialGameStatus (1);
+		PlayerPrefController.SetDragHold (0);
 	}
 
 	public void SetDifficulty(){
@@ -53,8 +54,8 @@ public class MainMenuController : MonoBehaviour {
 		case 2: // Normal
 			difficultyText.text = "Normal";
 			break;
-		case 3: // Hard
-			difficultyText.text = "Hard";
+		case 3: // Expert
+			difficultyText.text = "Expert";
 			break;
 		}
 
