@@ -1,0 +1,48 @@
+Initialize engine version: 5.6.3f1 (d3101c3b8468)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   22.21.13.8253
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.024 seconds
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\joefi\Documents\Unity Projects\KrassJam2\Builds\0.9.1\v0.9_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.187355 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.779552 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 736.
+Total: 0.888493 ms (FindLiveObjects: 0.092049 ms CreateObjectMapping: 0.049777 ms MarkObjects: 0.710320 ms  DeleteObjects: 0.035555 ms)
+
+Coroutine couldn't be started because the the game object 'TileRadius' is inactive!
+ 
+(Filename:  Line: 769)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.922760 ms
+
+Unloading 53 unused Assets to reduce memory usage. Loaded Objects now: 608.
+Total: 0.704789 ms (FindLiveObjects: 0.058074 ms CreateObjectMapping: 0.025283 ms MarkObjects: 0.479209 ms  DeleteObjects: 0.141431 ms)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 273c -> priority: 1 
+  Thread -> id: 3d0 -> priority: 1 
+  Thread -> id: 1c9c -> priority: 1 
+  Thread -> id: 2430 -> priority: 1 
